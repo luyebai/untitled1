@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--maven工程的坐标 gav（首字母）唯一的标识了一个maven工程-->
+    <groupId>untited</groupId><!--一般使用域名倒序+项目名-->
+    <artifactId>untitled1</artifactId><!--模块名-->
+    <version>1.0-SNAPSHOT</version><!--版本号  SNAPSHOT快照的意思表示不稳定，RELEASE表示正式版-->
+    <!--<packaging>pom</packaging>父工程需要打包方式，继承时使用-->
+    <!--
+        配置聚合，效果是在聚合工程上点击安装会进行一次性安装
+    <modules>次序不重要
+        <module>子工程的相对路径比如  ../hello(表示同级的工程)</module>
+        <module>子工程的相对路径比如  ../hello1(表示同级的工程)</module>
+        <module>子工程的相对路径比如  ../hello2(表示同级的工程)</module>
+    </modules>
+    -->
+
+    <!--<parent>
+        <groupId>父工程的groupId</groupId>
+        <artifactId>父工程的项目名</artifactId>
+        <version>版本号</version>
+        <relativePath>以当前文件为基准的父工程pom.xml的相对路径</relativePath>
+    </parent>-->
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <!--<scope>test</scope>  test表示这个依赖在测试有效，也就是test包下
+            compile表示在编译有效也就是main包下
+            -->
+        </dependency>
+        <!--cglib-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- poi 用来导入excl表格数据https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+        <dependency>
+            <groupId>net.sourceforge.jexcelapi</groupId>
+            <artifactId>jxl</artifactId>
+            <version>2.6.12</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.18.RELEASE</version>
+        </dependency>
+
+
+    </dependencies>
+    
+</project>
